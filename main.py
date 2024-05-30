@@ -1,7 +1,7 @@
 #!/bin/env python
 
 from argparse import ArgumentParser
-import git, os, os.path, shutil
+import os, os.path, shutil
 
 cli = ArgumentParser()
 subparsers = cli.add_subparsers(dest="subcommand")
