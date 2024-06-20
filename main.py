@@ -59,6 +59,11 @@ def stop(args):
     
     os.system("echo stop > runner-pipe")
 
+@subcommand()
+def restart(args):
+    os.system("echo stop > runner-pipe")
+    os.system("nohup ./bootstrap/runner.py &")
+
 if __name__ == "__main__":
     args = cli.parse_args()
     if args.subcommand is None:
